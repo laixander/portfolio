@@ -1,5 +1,5 @@
 <template>
-    <main class="flex-1 flex items-center">
+    <main class="flex-1 py-4">
         <slot />
     </main>
 </template>
