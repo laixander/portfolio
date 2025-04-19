@@ -1,5 +1,5 @@
 <template>
-    <header :class="[baseClass, { 'bg-white/80 backdrop-blur dark:bg-gray-900/80': isScrolled }]">
+    <header :class="[baseClass, isScrolled ? scrolledClass : '']">
         <div class="w-full flex items-center gap-2">
             <!-- <UAvatar src="/logo.png" alt="Beespoke Solutions Inc." size="md" /> -->
             <span class="text-primary-500 dark:text-primary-400">
@@ -77,6 +77,7 @@ onUnmounted(() => {
 })
 
 const baseClass = 'sticky top-0 z-10 flex justify-between items-center px-4 py-2.5 lg:py-0 border-b border-gray-100 dark:border-gray-800 transition-[background-color,color] duration-300'
+const scrolledClass = 'bg-white/80 backdrop-blur dark:bg-gray-900/80'
 const uiNavConfig = {
     wrapper: 'border-s border-gray-200 dark:border-gray-800',
     base: 'group flex border-s -ms-px leading-6 before:hidden my-4',

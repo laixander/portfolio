@@ -1,0 +1,9 @@
+body {
+    @apply bg-white dark:bg-gray-950;
+    &  > div:first-of-type {
+        @apply flex flex-col min-h-screen;
+        main {
+            @apply flex-1;
+        }
+    }
+}
